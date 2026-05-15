@@ -274,7 +274,7 @@ export default function Portfolio() {
                   title: 'Doyin',
                   description: 'ACampus E-Commence Marketplace mobible application',
                   url: 'https://doyin.site',
-                  tech: ['React Native', 'Firebase', 'Node.js'],
+                  tech: ['FlutterFlow', 'Firebase', 'Node.js'],
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-15%20at%2012.28.32-i2md440LhXHuAdfKzasAlHoYRc5uq8.jpeg',
                 },
                 {
