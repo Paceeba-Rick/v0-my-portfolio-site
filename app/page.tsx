@@ -76,6 +76,11 @@ export default function Portfolio() {
         <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
           {/* Left side - Text */}
           <div className="animate-slideInLeft">
+            <div className="animate-pulse-glow mb-2 inline-block">
+              <span className="text-sm font-semibold text-primary px-4 py-2 rounded-full bg-primary/10 border border-primary/30">
+                ✨ Full Stack Developer
+              </span>
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Hey, I&apos;m{' '}
               <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
@@ -151,6 +156,15 @@ export default function Portfolio() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
+            {/* Floating Achievement Badge */}
+            <div className="absolute -bottom-6 -right-6 animate-float">
+              <div className="bg-gradient-to-br from-primary to-accent p-4 rounded-full shadow-lg shadow-primary/50 border border-primary/30 w-24 h-24 flex items-center justify-center">
+                <div className="text-center">
+                  <p className="text-sm font-bold text-foreground">4+ Years</p>
+                  <p className="text-xs text-foreground/80">Development</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -171,7 +185,7 @@ export default function Portfolio() {
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="group p-8 rounded-xl border border-border hover:border-primary/50 bg-background hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+              <div className="animate-stagger-1 group p-8 rounded-xl border border-border hover:border-primary/50 bg-background hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer hover:scale-105">
                 <TrendingUp className="text-primary mb-4 group-hover:scale-110 transition-transform" size={32} />
                 <h3 className="text-xl font-bold mb-2">Full Stack Development</h3>
                 <p className="text-muted-foreground">
@@ -180,7 +194,7 @@ export default function Portfolio() {
                 </p>
               </div>
 
-              <div className="group p-8 rounded-xl border border-border hover:border-primary/50 bg-background hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+              <div className="animate-stagger-2 group p-8 rounded-xl border border-border hover:border-primary/50 bg-background hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer hover:scale-105">
                 <svg
                   className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform"
                   fill="none"
@@ -200,7 +214,7 @@ export default function Portfolio() {
                 </p>
               </div>
 
-              <div className="group p-8 rounded-xl border border-border hover:border-primary/50 bg-background hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+              <div className="animate-stagger-3 group p-8 rounded-xl border border-border hover:border-primary/50 bg-background hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer hover:scale-105">
                 <svg
                   className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform"
                   fill="none"
@@ -221,12 +235,9 @@ export default function Portfolio() {
               </div>
             </div>
 
-            <div className="mt-16 p-8 rounded-xl border border-primary/30 bg-gradient-to-br from-primary/10 via-transparent to-accent/10">
+            <div className="mt-16 p-8 rounded-xl border border-primary/30 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 animate-slideUp">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I&apos;m a passionate full-stack developer with a proven track record of building production-grade
-                applications. With certifications from IBM and Coursera in Software Engineering and Mobile App
-                Development, I combine technical expertise with creative problem-solving. When I&apos;m not coding, you
-                can find me on TikTok sharing development insights or working on new projects.
+                I&apos;m a passionate full-stack developer studying at the <span className="text-primary font-semibold">University of Ghana</span>, with a proven track record of building production-grade applications. With certifications from IBM and Coursera in Software Engineering and Mobile App Development, I combine technical expertise with creative problem-solving. When I&apos;m not coding, you can find me on TikTok sharing development insights or working on innovative projects.
               </p>
             </div>
           </div>
@@ -279,9 +290,9 @@ export default function Portfolio() {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group cursor-pointer"
+                  className={`group cursor-pointer ${['animate-stagger-1', 'animate-stagger-2', 'animate-stagger-3', 'animate-stagger-4'][index]}`}
                 >
-                  <div className="relative overflow-hidden rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 h-full">
+                  <div className="relative overflow-hidden rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 h-full hover:scale-105">
                     {/* Image */}
                     <div className="relative h-64 overflow-hidden">
                       <Image
@@ -346,7 +357,7 @@ export default function Portfolio() {
               ].map((cert, index) => (
                 <div
                   key={index}
-                  className="group relative rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+                  className={`group relative rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-105 ${['animate-stagger-1', 'animate-stagger-2'][index]}`}
                 >
                   <Image
                     src={cert.image}
@@ -367,7 +378,7 @@ export default function Portfolio() {
             </div>
 
             {/* Additional info */}
-            <div className="mt-12 p-8 rounded-xl border border-primary/30 bg-gradient-to-br from-primary/5 via-transparent to-accent/5">
+            <div className="animate-slideUp mt-12 p-8 rounded-xl border border-primary/30 bg-gradient-to-br from-primary/5 via-transparent to-accent/5">
               <h3 className="text-2xl font-bold mb-4">Continuous Learning</h3>
               <p className="text-muted-foreground leading-relaxed">
                 I&apos;m committed to staying at the forefront of technology. My certifications demonstrate my dedication
@@ -458,7 +469,7 @@ export default function Portfolio() {
                 href="https://github.com/Paceeba-Rick"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-8 rounded-xl border border-border hover:border-primary/50 bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center"
+                className="animate-stagger-1 group p-8 rounded-xl border border-border hover:border-primary/50 bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center hover:scale-105"
               >
                 <Github className="mx-auto mb-4 text-primary group-hover:scale-125 transition-transform" size={40} />
                 <h3 className="text-xl font-bold mb-2">GitHub</h3>
@@ -472,7 +483,7 @@ export default function Portfolio() {
                 href="https://wa.me/0533125955"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-8 rounded-xl border border-border hover:border-primary/50 bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center"
+                className="animate-stagger-2 group p-8 rounded-xl border border-border hover:border-primary/50 bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center hover:scale-105"
               >
                 <MessageCircle className="mx-auto mb-4 text-primary group-hover:scale-125 transition-transform" size={40} />
                 <h3 className="text-xl font-bold mb-2">WhatsApp</h3>
@@ -486,7 +497,7 @@ export default function Portfolio() {
                 href="https://www.tiktok.com/@_ceeba"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-8 rounded-xl border border-border hover:border-primary/50 bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center"
+                className="animate-stagger-3 group p-8 rounded-xl border border-border hover:border-primary/50 bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center hover:scale-105"
               >
                 <svg
                   className="mx-auto mb-4 w-10 h-10 text-primary group-hover:scale-125 transition-transform"
