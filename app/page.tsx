@@ -246,18 +246,18 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
-                  title: 'Lens & Pixels',
+                  title: 'Lens J-Pixels',
                   description: 'Professional photography portfolio and service booking platform',
                   url: 'https://lensjpixels.com',
                   tech: ['Next.js', 'React', 'Tailwind CSS'],
-                  image: 'https://images.unsplash.com/photo-1611532736579-6b16e2b50449?w=600&h=400&fit=crop',
+                  image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lensjpixels-0syVW5gjGiu8NcsQLJ47H4uWqtpm4t.jpeg',
                 },
                 {
                   title: 'Ekduol LTD',
                   description: 'B2B e-commerce platform with advanced inventory management',
                   url: 'https://ekduoltd.vercel.app',
                   tech: ['React', 'Node.js', 'MongoDB'],
-                  image: 'https://images.unsplash.com/photo-1460925895917-aae19106c1d7?w=600&h=400&fit=crop',
+                  image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ekduo-OEvnTOjl2m0sQOw7XxV9uTaq7TgJMH.jpeg',
                 },
                 {
                   title: 'Doyin',
@@ -271,7 +271,7 @@ export default function Portfolio() {
                   description: 'Agricultural management system with analytics dashboard',
                   url: 'https://mzdeerfarms.com',
                   tech: ['Next.js', 'PostgreSQL', 'Tailwind CSS'],
-                  image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop',
+                  image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mzdeerfarms-h3foyyHniyKZzavznhTt7Un7u46oIF.jpeg',
                 },
               ].map((project, index) => (
                 <a
