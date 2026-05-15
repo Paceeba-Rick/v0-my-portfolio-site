@@ -464,7 +464,7 @@ export default function Portfolio() {
               </span>
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
               <a
                 href="https://github.com/Paceeba-Rick"
                 target="_blank"
@@ -510,6 +510,30 @@ export default function Portfolio() {
                 <p className="text-muted-foreground mb-4">Follow for dev content and tutorials</p>
                 <span className="text-primary font-semibold group-hover:translate-x-2 transition-transform inline-block">
                   Follow →
+                </span>
+              </a>
+
+              <a
+                href="mailto:yakubceeba@gmail.com"
+                className="animate-stagger-4 group p-8 rounded-xl border border-border hover:border-primary/50 bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center hover:scale-105"
+              >
+                <svg
+                  className="mx-auto mb-4 w-10 h-10 text-primary group-hover:scale-125 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <h3 className="text-xl font-bold mb-2">Email</h3>
+                <p className="text-muted-foreground mb-4">yakubceeba@gmail.com</p>
+                <span className="text-primary font-semibold group-hover:translate-x-2 transition-transform inline-block">
+                  Send Email →
                 </span>
               </a>
             </div>
