@@ -265,14 +265,14 @@ export default function Portfolio() {
                 },
                 {
                   title: 'Ekduol LTD',
-                  description: 'A palm product production company website',
+                  description: 'A palm products production company website',
                   url: 'https://ekduoltd.vercel.app',
                   tech: ['React', 'Node.js', 'MongoDB'],
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ekduo-OEvnTOjl2m0sQOw7XxV9uTaq7TgJMH.jpeg',
                 },
                 {
                   title: 'Doyin',
-                  description: 'ACampus E-Commence Marketplace mobible application',
+                  description: 'A Campus E-Commence Marketplace mobible application',
                   url: 'https://doyin.site',
                   tech: ['FlutterFlow', 'Firebase', 'Node.js'],
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-15%20at%2012.28.32-i2md440LhXHuAdfKzasAlHoYRc5uq8.jpeg',
