@@ -268,7 +268,7 @@ export default function Portfolio() {
                 },
                 {
                   title: 'MZ Deer Farms',
-                  description: 'Agricultural management system with analytics dashboard',
+                  description: 'A Fresh Whole checken and poultry business',
                   url: 'https://mzdeerfarms.com',
                   tech: ['Next.js', 'PostgreSQL', 'Tailwind CSS'],
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mzdeerfarms-h3foyyHniyKZzavznhTt7Un7u46oIF.jpeg',
