@@ -341,7 +341,7 @@ export default function Portfolio() {
                   title: 'Introduction to Mobile App Development',
                   issuer: 'IBM / Coursera',
                   date: 'August 6, 2025',
-                  image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-15%20at%2012.28.31-LsEW4aHcGnQYVTJUGLkFKVk65idwn.jpeg',
+                  image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-15%20at%2012.28.31-uAAfeekTNokmHiJRQXDURf8ZQ8SOUE.jpeg',
                 },
               ].map((cert, index) => (
                 <div
@@ -374,6 +374,70 @@ export default function Portfolio() {
                 to professional development in software engineering and mobile app development. I&apos;m constantly
                 exploring new frameworks, tools, and best practices to deliver exceptional results.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership & Speaking Section */}
+      <section id="leadership" className="py-20 bg-card/30">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="animate-fadeInUp">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Leadership & Community Impact
+              </span>
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-2xl font-bold mb-3">Leadership Development Training</h3>
+                  <p className="text-lg text-muted-foreground mb-4">
+                    African Innovators Leadership Program
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Participated in an intensive leadership development program designed for emerging African innovators and tech entrepreneurs. This experience enhanced my ability to communicate ideas, lead teams, and inspire others in the tech ecosystem. The program focused on practical leadership skills, strategic thinking, and building impactful communities.
+                  </p>
+                </div>
+
+                <div className="p-6 rounded-lg border border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5">
+                  <h4 className="font-semibold text-primary mb-2">Key Takeaways:</h4>
+                  <ul className="text-sm text-muted-foreground space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Public speaking and effective communication</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Team leadership and mentoring</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Strategic vision and innovation</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Building networks in the African tech ecosystem</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="group relative rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-15%20at%2013.08.35-VB1qR90Nsds8DRqBeExqer2RNgFun4.jpeg"
+                  alt="Leadership Development Training - African Innovators"
+                  width={600}
+                  height={500}
+                  className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <p className="text-sm text-accent font-semibold">Speaking at African Innovators Leadership Program</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
