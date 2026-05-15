@@ -3,7 +3,10 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Github, Linkedin, TrendingUp, ChevronDown, Mail, MessageCircle } from 'lucide-react';
+import { Github, TrendingUp, Mail, MessageCircle } from 'lucide-react';
+import { ProjectCard } from '@/components/ProjectCard';
+import { CertificateCard } from '@/components/CertificateCard';
+import { ContactCard } from '@/components/ContactCard';
 
 export default function Portfolio() {
   const [scrollY, setScrollY] = useState(0);
@@ -33,8 +36,13 @@ export default function Portfolio() {
 
   return (
     <div className="w-full bg-background text-foreground overflow-hidden">
+      {/* Skip to main content link */}
+      <a href="#main-content" className="skip-to-content">
+        Skip to main content
+      </a>
+
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border" role="navigation" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-fadeIn">
             PY
@@ -61,12 +69,15 @@ export default function Portfolio() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section
-        id="home"
-        ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden"
-      >
+      {/* Main Content */}
+      <main id="main-content">
+        {/* Hero Section */}
+        <section
+          id="home"
+          ref={heroRef}
+          className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden"
+          aria-label="Hero section"
+        >
         {/* Animated background gradient */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-20 right-10 w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-pulse" />
@@ -133,7 +144,7 @@ export default function Portfolio() {
                 </svg>
               </a>
               <a
-                href="mailto:paceeba@email.com"
+                href="mailto:yakubceeba@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Email"
               >
@@ -285,45 +296,7 @@ export default function Portfolio() {
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mzdeerfarms-h3foyyHniyKZzavznhTt7Un7u46oIF.jpeg',
                 },
               ].map((project, index) => (
-                <a
-                  key={index}
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`group cursor-pointer ${['animate-stagger-1', 'animate-stagger-2', 'animate-stagger-3', 'animate-stagger-4'][index]}`}
-                >
-                  <div className="relative overflow-hidden rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 h-full hover:scale-105">
-                    {/* Image */}
-                    <div className="relative h-64 overflow-hidden">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        width={600}
-                        height={400}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-6 bg-card/80 backdrop-blur-sm">
-                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                        {project.title}
-                      </h3>
-                      <p className="text-muted-foreground mb-4">{project.description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {project.tech.map((tech, i) => (
-                          <span
-                            key={i}
-                            className="px-3 py-1 text-xs font-medium bg-primary/20 text-primary rounded-full border border-primary/30"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </a>
+                <ProjectCard key={index} {...project} index={index} />
               ))}
             </div>
           </div>
@@ -355,25 +328,7 @@ export default function Portfolio() {
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-15%20at%2012.28.31-uAAfeekTNokmHiJRQXDURf8ZQ8SOUE.jpeg',
                 },
               ].map((cert, index) => (
-                <div
-                  key={index}
-                  className={`group relative rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-105 ${['animate-stagger-1', 'animate-stagger-2'][index]}`}
-                >
-                  <Image
-                    src={cert.image}
-                    alt={cert.title}
-                    width={600}
-                    height={400}
-                    className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground mb-1">{cert.title}</h3>
-                      <p className="text-muted-foreground mb-2">{cert.issuer}</p>
-                      <p className="text-sm text-accent">{cert.date}</p>
-                    </div>
-                  </div>
-                </div>
+                <CertificateCard key={index} {...cert} index={index} />
               ))}
             </div>
 
@@ -465,77 +420,51 @@ export default function Portfolio() {
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-              <a
+              <ContactCard
+                icon={<Github size={40} />}
+                title="GitHub"
+                description="Check out my repositories and open source work"
                 href="https://github.com/Paceeba-Rick"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="animate-stagger-1 group p-8 rounded-xl border border-border hover:border-primary/50 bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center hover:scale-105"
-              >
-                <Github className="mx-auto mb-4 text-primary group-hover:scale-125 transition-transform" size={40} />
-                <h3 className="text-xl font-bold mb-2">GitHub</h3>
-                <p className="text-muted-foreground mb-4">Check out my repositories and open source work</p>
-                <span className="text-primary font-semibold group-hover:translate-x-2 transition-transform inline-block">
-                  Visit GitHub →
-                </span>
-              </a>
-
-              <a
+                label="Visit GitHub"
+                index={0}
+              />
+              <ContactCard
+                icon={<MessageCircle size={40} />}
+                title="WhatsApp"
+                description="Let's discuss your project ideas"
                 href="https://wa.me/0533125955"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="animate-stagger-2 group p-8 rounded-xl border border-border hover:border-primary/50 bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center hover:scale-105"
-              >
-                <MessageCircle className="mx-auto mb-4 text-primary group-hover:scale-125 transition-transform" size={40} />
-                <h3 className="text-xl font-bold mb-2">WhatsApp</h3>
-                <p className="text-muted-foreground mb-4">Let&apos;s discuss your project ideas</p>
-                <span className="text-primary font-semibold group-hover:translate-x-2 transition-transform inline-block">
-                  Send Message →
-                </span>
-              </a>
-
-              <a
+                label="Send Message"
+                index={1}
+              />
+              <ContactCard
+                icon={
+                  <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 1 1-2.4-2.4c.34 0 .67.04 1 .12V9.41a5.5 5.5 0 1 0 6.85 5.56V10a7.18 7.18 0 0 0 3.77-1.16v-3.15z" />
+                  </svg>
+                }
+                title="TikTok"
+                description="Follow for dev content and tutorials"
                 href="https://www.tiktok.com/@_ceeba"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="animate-stagger-3 group p-8 rounded-xl border border-border hover:border-primary/50 bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center hover:scale-105"
-              >
-                <svg
-                  className="mx-auto mb-4 w-10 h-10 text-primary group-hover:scale-125 transition-transform"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 1 1-2.4-2.4c.34 0 .67.04 1 .12V9.41a5.5 5.5 0 1 0 6.85 5.56V10a7.18 7.18 0 0 0 3.77-1.16v-3.15z" />
-                </svg>
-                <h3 className="text-xl font-bold mb-2">TikTok</h3>
-                <p className="text-muted-foreground mb-4">Follow for dev content and tutorials</p>
-                <span className="text-primary font-semibold group-hover:translate-x-2 transition-transform inline-block">
-                  Follow →
-                </span>
-              </a>
-
-              <a
+                label="Follow"
+                index={2}
+              />
+              <ContactCard
+                icon={
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                }
+                title="Email"
+                description="yakubceeba@gmail.com"
                 href="mailto:yakubceeba@gmail.com"
-                className="animate-stagger-4 group p-8 rounded-xl border border-border hover:border-primary/50 bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center hover:scale-105"
-              >
-                <svg
-                  className="mx-auto mb-4 w-10 h-10 text-primary group-hover:scale-125 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-                <h3 className="text-xl font-bold mb-2">Email</h3>
-                <p className="text-muted-foreground mb-4">yakubceeba@gmail.com</p>
-                <span className="text-primary font-semibold group-hover:translate-x-2 transition-transform inline-block">
-                  Send Email →
-                </span>
-              </a>
+                label="Send Email"
+                index={3}
+              />
             </div>
 
             <div className="text-center p-8 rounded-xl border border-primary/30 bg-gradient-to-br from-primary/10 to-accent/10">
@@ -604,6 +533,45 @@ export default function Portfolio() {
             >
               <MessageCircle size={20} />
             </a>
+          </div>
+        </div>
+      </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-card/30 border-t border-border py-12">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-lg font-bold mb-4">Paceeba Yakubu</h3>
+              <p className="text-muted-foreground">Full Stack Developer @ University of Ghana</p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2 text-muted-foreground">
+                <li><a href="#home" className="hover:text-primary transition-colors">Home</a></li>
+                <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
+                <li><a href="#projects" className="hover:text-primary transition-colors">Projects</a></li>
+                <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Connect</h4>
+              <ul className="space-y-2 text-muted-foreground">
+                <li><a href="https://github.com/Paceeba-Rick" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a></li>
+                <li><a href="https://www.tiktok.com/@_ceeba" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">TikTok</a></li>
+                <li><a href="mailto:yakubceeba@gmail.com" className="hover:text-primary transition-colors">Email</a></li>
+                <li><a href="https://wa.me/0533125955" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">WhatsApp</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center">
+            <p className="text-muted-foreground text-sm">
+              © 2026 Paceeba Yakubu. All rights reserved.
+            </p>
+            <p className="text-muted-foreground text-sm mt-4 sm:mt-0">
+              Built with Next.js, React & Tailwind CSS
+            </p>
           </div>
         </div>
       </footer>
