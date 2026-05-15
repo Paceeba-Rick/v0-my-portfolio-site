@@ -1,0 +1,513 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Github, Linkedin, TrendingUp, ChevronDown, Mail, MessageCircle } from 'lucide-react';
+
+export default function Portfolio() {
+  const [scrollY, setScrollY] = useState(0);
+  const [activeSection, setActiveSection] = useState('home');
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+
+      // Update active section based on scroll
+      const sections = ['home', 'about', 'projects', 'certificates', 'contact'];
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100) {
+            setActiveSection(section);
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div className="w-full bg-background text-foreground overflow-hidden">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-fadeIn">
+            PY
+          </div>
+          <div className="hidden md:flex items-center gap-8">
+            {[
+              { id: 'home', label: 'Home' },
+              { id: 'about', label: 'About' },
+              { id: 'projects', label: 'Projects' },
+              { id: 'certificates', label: 'Certificates' },
+              { id: 'contact', label: 'Contact' },
+            ].map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className={`text-sm font-medium transition-colors duration-300 ${
+                  activeSection === item.id ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section
+        id="home"
+        ref={heroRef}
+        className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden"
+      >
+        {/* Animated background gradient */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-20 right-10 w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-pulse" />
+          <div className="absolute bottom-20 left-10 w-72 h-72 bg-accent/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-pulse" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+          {/* Left side - Text */}
+          <div className="animate-slideInLeft">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              Hey, I&apos;m{' '}
+              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                Paceeba Yakubu
+              </span>
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              Full Stack Developer crafting beautiful, performant web and mobile experiences. I specialize in turning
+              complex ideas into elegant solutions.
+            </p>
+            <div className="flex flex-wrap gap-4 mb-8">
+              <Link
+                href="#projects"
+                className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
+              >
+                View My Work
+              </Link>
+              <a
+                href="https://github.com/Paceeba-Rick"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300"
+              >
+                GitHub Profile
+              </a>
+            </div>
+            <div className="flex items-center gap-6">
+              <a
+                href="https://github.com/Paceeba-Rick"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="GitHub"
+              >
+                <Github size={24} />
+              </a>
+              <a
+                href="https://www.tiktok.com/@_ceeba"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="TikTok"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 1 1-2.4-2.4c.34 0 .67.04 1 .12V9.41a5.5 5.5 0 1 0 6.85 5.56V10a7.18 7.18 0 0 0 3.77-1.16v-3.15z" />
+                </svg>
+              </a>
+              <a
+                href="mailto:paceeba@email.com"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Email"
+              >
+                <Mail size={24} />
+              </a>
+            </div>
+          </div>
+
+          {/* Right side - Image */}
+          <div className="relative group animate-scaleIn">
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-2xl opacity-30 group-hover:opacity-50 transition-opacity blur group-hover:blur-lg duration-300" />
+            <div className="relative rounded-2xl overflow-hidden border border-primary/30 group-hover:border-primary/60 transition-colors">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-15%20at%2013.08.36-CXac2xsv4J9MgwBUx8nB87ImCWiHyy.jpeg"
+                alt="Paceeba Yakubu - Developer"
+                width={500}
+                height={600}
+                className="w-full h-auto object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+          <ChevronDown className="text-primary" size={32} />
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 bg-card/30">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="animate-fadeInUp">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                About Me
+              </span>
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="group p-8 rounded-xl border border-border hover:border-primary/50 bg-background hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+                <TrendingUp className="text-primary mb-4 group-hover:scale-110 transition-transform" size={32} />
+                <h3 className="text-xl font-bold mb-2">Full Stack Development</h3>
+                <p className="text-muted-foreground">
+                  Building complete web applications from frontend to backend, with expertise in modern frameworks and
+                  technologies.
+                </p>
+              </div>
+
+              <div className="group p-8 rounded-xl border border-border hover:border-primary/50 bg-background hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+                <svg
+                  className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                  />
+                </svg>
+                <h3 className="text-xl font-bold mb-2">Mobile Apps</h3>
+                <p className="text-muted-foreground">
+                  Creating responsive and intuitive mobile applications for iOS and Android platforms.
+                </p>
+              </div>
+
+              <div className="group p-8 rounded-xl border border-border hover:border-primary/50 bg-background hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+                <svg
+                  className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <h3 className="text-xl font-bold mb-2">UI/UX Design</h3>
+                <p className="text-muted-foreground">
+                  Designing elegant and user-centered interfaces that look great and function beautifully.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-16 p-8 rounded-xl border border-primary/30 bg-gradient-to-br from-primary/10 via-transparent to-accent/10">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                I&apos;m a passionate full-stack developer with a proven track record of building production-grade
+                applications. With certifications from IBM and Coursera in Software Engineering and Mobile App
+                Development, I combine technical expertise with creative problem-solving. When I&apos;m not coding, you
+                can find me on TikTok sharing development insights or working on new projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="animate-fadeInUp">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Featured Projects
+              </span>
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                {
+                  title: 'Lens & Pixels',
+                  description: 'Professional photography portfolio and service booking platform',
+                  url: 'https://lensjpixels.com',
+                  tech: ['Next.js', 'React', 'Tailwind CSS'],
+                  image: 'https://images.unsplash.com/photo-1611532736579-6b16e2b50449?w=600&h=400&fit=crop',
+                },
+                {
+                  title: 'Ekduol LTD',
+                  description: 'B2B e-commerce platform with advanced inventory management',
+                  url: 'https://ekduoltd.vercel.app',
+                  tech: ['React', 'Node.js', 'MongoDB'],
+                  image: 'https://images.unsplash.com/photo-1460925895917-aae19106c1d7?w=600&h=400&fit=crop',
+                },
+                {
+                  title: 'Doyin',
+                  description: 'Food delivery and custom order management application',
+                  url: 'https://doyin.site',
+                  tech: ['React Native', 'Firebase', 'Node.js'],
+                  image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-15%20at%2012.28.32-i2md440LhXHuAdfKzasAlHoYRc5uq8.jpeg',
+                },
+                {
+                  title: 'MZ Deer Farms',
+                  description: 'Agricultural management system with analytics dashboard',
+                  url: 'https://mzdeerfarms.com',
+                  tech: ['Next.js', 'PostgreSQL', 'Tailwind CSS'],
+                  image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop',
+                },
+              ].map((project, index) => (
+                <a
+                  key={index}
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group cursor-pointer"
+                >
+                  <div className="relative overflow-hidden rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 h-full">
+                    {/* Image */}
+                    <div className="relative h-64 overflow-hidden">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        width={600}
+                        height={400}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-6 bg-card/80 backdrop-blur-sm">
+                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-muted-foreground mb-4">{project.description}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((tech, i) => (
+                          <span
+                            key={i}
+                            className="px-3 py-1 text-xs font-medium bg-primary/20 text-primary rounded-full border border-primary/30"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certificates Section */}
+      <section id="certificates" className="py-20 bg-card/30">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="animate-fadeInUp">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Certifications & Achievements
+              </span>
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                {
+                  title: 'Introduction to Software Engineering',
+                  issuer: 'IBM / Coursera',
+                  date: 'August 2, 2025',
+                  image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-15%20at%2012.28.30-BkyIkfAg4EtS6XefxJ8vedWmKiWnAj.jpeg',
+                },
+                {
+                  title: 'Introduction to Mobile App Development',
+                  issuer: 'IBM / Coursera',
+                  date: 'August 6, 2025',
+                  image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-15%20at%2012.28.31-LsEW4aHcGnQYVTJUGLkFKVk65idwn.jpeg',
+                },
+              ].map((cert, index) => (
+                <div
+                  key={index}
+                  className="group relative rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+                >
+                  <Image
+                    src={cert.image}
+                    alt={cert.title}
+                    width={600}
+                    height={400}
+                    className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div>
+                      <h3 className="text-xl font-bold text-foreground mb-1">{cert.title}</h3>
+                      <p className="text-muted-foreground mb-2">{cert.issuer}</p>
+                      <p className="text-sm text-accent">{cert.date}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Additional info */}
+            <div className="mt-12 p-8 rounded-xl border border-primary/30 bg-gradient-to-br from-primary/5 via-transparent to-accent/5">
+              <h3 className="text-2xl font-bold mb-4">Continuous Learning</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                I&apos;m committed to staying at the forefront of technology. My certifications demonstrate my dedication
+                to professional development in software engineering and mobile app development. I&apos;m constantly
+                exploring new frameworks, tools, and best practices to deliver exceptional results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="animate-fadeInUp">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Let&apos;s Connect
+              </span>
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <a
+                href="https://github.com/Paceeba-Rick"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-8 rounded-xl border border-border hover:border-primary/50 bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center"
+              >
+                <Github className="mx-auto mb-4 text-primary group-hover:scale-125 transition-transform" size={40} />
+                <h3 className="text-xl font-bold mb-2">GitHub</h3>
+                <p className="text-muted-foreground mb-4">Check out my repositories and open source work</p>
+                <span className="text-primary font-semibold group-hover:translate-x-2 transition-transform inline-block">
+                  Visit GitHub →
+                </span>
+              </a>
+
+              <a
+                href="https://wa.me/0533125955"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-8 rounded-xl border border-border hover:border-primary/50 bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center"
+              >
+                <MessageCircle className="mx-auto mb-4 text-primary group-hover:scale-125 transition-transform" size={40} />
+                <h3 className="text-xl font-bold mb-2">WhatsApp</h3>
+                <p className="text-muted-foreground mb-4">Let&apos;s discuss your project ideas</p>
+                <span className="text-primary font-semibold group-hover:translate-x-2 transition-transform inline-block">
+                  Send Message →
+                </span>
+              </a>
+
+              <a
+                href="https://www.tiktok.com/@_ceeba"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-8 rounded-xl border border-border hover:border-primary/50 bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center"
+              >
+                <svg
+                  className="mx-auto mb-4 w-10 h-10 text-primary group-hover:scale-125 transition-transform"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 1 1-2.4-2.4c.34 0 .67.04 1 .12V9.41a5.5 5.5 0 1 0 6.85 5.56V10a7.18 7.18 0 0 0 3.77-1.16v-3.15z" />
+                </svg>
+                <h3 className="text-xl font-bold mb-2">TikTok</h3>
+                <p className="text-muted-foreground mb-4">Follow for dev content and tutorials</p>
+                <span className="text-primary font-semibold group-hover:translate-x-2 transition-transform inline-block">
+                  Follow →
+                </span>
+              </a>
+            </div>
+
+            <div className="text-center p-8 rounded-xl border border-primary/30 bg-gradient-to-br from-primary/10 to-accent/10">
+              <p className="text-lg text-muted-foreground mb-6">
+                Whether you have a project in mind or just want to chat, I&apos;m always happy to connect with fellow
+                developers and creative minds.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="https://wa.me/0533125955"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
+                >
+                  Get In Touch
+                </a>
+                <a
+                  href="https://github.com/Paceeba-Rick"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300"
+                >
+                  View GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-border py-12 bg-card/30">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <p className="text-muted-foreground mb-4">© 2025 Paceeba Yakubu. All rights reserved.</p>
+          <div className="flex justify-center gap-6">
+            <a
+              href="https://github.com/Paceeba-Rick"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="GitHub"
+            >
+              <Github size={20} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@_ceeba"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="TikTok"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.67a2.4 2.4 0 1 1-2.4-2.4c.34 0 .67.04 1 .12V9.41a5.5 5.5 0 1 0 6.85 5.56V10a7.18 7.18 0 0 0 3.77-1.16v-3.15z" />
+              </svg>
+            </a>
+            <a
+              href="https://wa.me/0533125955"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="WhatsApp"
+            >
+              <MessageCircle size={20} />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
