@@ -419,7 +419,7 @@ export default function Portfolio() {
               </span>
             </h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
               <ContactCard
                 icon={<Github size={40} />}
                 title="GitHub"
@@ -429,12 +429,24 @@ export default function Portfolio() {
                 index={0}
               />
               <ContactCard
+                icon={
+                  <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.474-2.237-1.668-2.237-.909 0-1.451.613-1.688 1.205-.087.216-.109.517-.109.817v5.784h-3.554s.047-9.381 0-10.355h3.554v1.468c-.009.015-.022.03-.033.046h.033v-.046c.456-.704 1.27-1.708 3.088-1.708 2.258 0 3.95 1.476 3.95 4.64v5.955zM5.337 8.855c-1.176 0-1.95-.775-1.95-1.743 0-.975.774-1.743 1.95-1.743 1.176 0 1.95.768 1.95 1.743 0 .968-.774 1.743-1.95 1.743zm1.549 11.597H3.787V9.097h3.099v11.355zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                  </svg>
+                }
+                title="LinkedIn"
+                description="Connect with me professionally"
+                href="https://www.linkedin.com/in/paceeba-yakubu-87ba27352/"
+                label="View Profile"
+                index={1}
+              />
+              <ContactCard
                 icon={<MessageCircle size={40} />}
                 title="WhatsApp"
                 description="Let's discuss your project ideas"
                 href="https://wa.me/0533125955"
                 label="Send Message"
-                index={1}
+                index={2}
               />
               <ContactCard
                 icon={
@@ -446,7 +458,7 @@ export default function Portfolio() {
                 description="Follow for dev content and tutorials"
                 href="https://www.tiktok.com/@_ceeba"
                 label="Follow"
-                index={2}
+                index={3}
               />
               <ContactCard
                 icon={
@@ -463,7 +475,7 @@ export default function Portfolio() {
                 description="yakubceeba@gmail.com"
                 href="mailto:yakubceeba@gmail.com"
                 label="Send Email"
-                index={3}
+                index={4}
               />
             </div>
 
@@ -508,6 +520,21 @@ export default function Portfolio() {
               aria-label="GitHub"
             >
               <Github size={20} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/paceeba-yakubu-87ba27352/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="LinkedIn"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.474-2.237-1.668-2.237-.909 0-1.451.613-1.688 1.205-.087.216-.109.517-.109.817v5.784h-3.554s.047-9.381 0-10.355h3.554v1.468c-.009.015-.022.03-.033.046h.033v-.046c.456-.704 1.27-1.708 3.088-1.708 2.258 0 3.95 1.476 3.95 4.64v5.955zM5.337 8.855c-1.176 0-1.95-.775-1.95-1.743 0-.975.774-1.743 1.95-1.743 1.176 0 1.95.768 1.95 1.743 0 .968-.774 1.743-1.95 1.743zm1.549 11.597H3.787V9.097h3.099v11.355zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+              </svg>
             </a>
             <a
               href="https://www.tiktok.com/@_ceeba"
