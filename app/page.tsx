@@ -296,7 +296,6 @@ export default function Portfolio() {
                 <ProjectCard key={index} {...project} index={index} />
               ))}
             </div>
-          </div>
         </div>
       </section>
 
