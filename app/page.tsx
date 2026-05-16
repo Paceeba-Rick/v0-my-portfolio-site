@@ -250,7 +250,6 @@ export default function Portfolio() {
                 I&apos;m a passionate full-stack developer studying at the <span className="text-primary font-semibold">University of Ghana</span>, with a proven track record of building production-grade applications. With certifications from IBM and Coursera in Software Engineering and Mobile App Development, I combine technical expertise with creative problem-solving. When I&apos;m not coding, you can find me on TikTok sharing development insights or working on innovative projects.
               </p>
             </div>
-          </div>
         </div>
       </section>
 
