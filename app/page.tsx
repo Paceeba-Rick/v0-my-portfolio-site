@@ -535,46 +535,8 @@ export default function Portfolio() {
             </a>
           </div>
         </div>
-      </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-card/30 border-t border-border py-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="text-lg font-bold mb-4">Paceeba Yakubu</h3>
-              <p className="text-muted-foreground">Full Stack Developer @ University of Ghana</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li><a href="#home" className="hover:text-primary transition-colors">Home</a></li>
-                <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
-                <li><a href="#projects" className="hover:text-primary transition-colors">Projects</a></li>
-                <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Connect</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li><a href="https://github.com/Paceeba-Rick" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a></li>
-                <li><a href="https://www.tiktok.com/@_ceeba" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">TikTok</a></li>
-                <li><a href="mailto:yakubceeba@gmail.com" className="hover:text-primary transition-colors">Email</a></li>
-                <li><a href="https://wa.me/0533125955" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">WhatsApp</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-muted-foreground text-sm">
-              © 2026 Paceeba Yakubu. All rights reserved.
-            </p>
-            <p className="text-muted-foreground text-sm mt-4 sm:mt-0">
-              Built with Next.js, React & Tailwind CSS
-            </p>
-          </div>
-        </div>
       </footer>
+    </main>
     </div>
   );
 }
