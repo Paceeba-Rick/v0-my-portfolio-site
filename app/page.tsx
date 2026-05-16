@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Github, TrendingUp, Mail, MessageCircle } from 'lucide-react';
+import { Github, TrendingUp, Mail, MessageCircle, ChevronDown } from 'lucide-react';
 import { ProjectCard } from '@/components/ProjectCard';
 import { CertificateCard } from '@/components/CertificateCard';
 import { ContactCard } from '@/components/ContactCard';
@@ -537,6 +537,7 @@ export default function Portfolio() {
         </div>
       </footer>
     </main>
+
     </div>
   );
 }
