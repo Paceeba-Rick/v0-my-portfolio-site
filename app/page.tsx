@@ -84,28 +84,28 @@ export default function Portfolio() {
           <div className="absolute bottom-20 left-10 w-72 h-72 bg-accent/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-pulse" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left side - Text */}
           <div className="animate-slideInLeft">
-            <div className="animate-pulse-glow mb-2 inline-block">
-              <span className="text-sm font-semibold text-primary px-4 py-2 rounded-full bg-primary/10 border border-primary/30">
+            <div className="animate-pulse-glow mb-4 inline-block">
+              <span className="text-xs sm:text-sm font-semibold text-primary px-3 sm:px-4 py-2 rounded-full bg-primary/10 border border-primary/30">
                 ✨ Full Stack Developer
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               Hey, I&apos;m{' '}
               <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                 Paceeba Yakubu
               </span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
               Full Stack Developer crafting beautiful, performant web and mobile experiences. I specialize in turning
               complex ideas into elegant solutions.
             </p>
-            <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-8">
               <Link
                 href="#projects"
-                className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
+                className="px-6 sm:px-8 py-2.5 sm:py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 hover:scale-105 text-center"
               >
                 View My Work
               </Link>
@@ -113,12 +113,12 @@ export default function Portfolio() {
                 href="https://github.com/Paceeba-Rick"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300"
+                className="px-6 sm:px-8 py-2.5 sm:py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 text-center"
               >
                 GitHub Profile
               </a>
             </div>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 sm:gap-6">
               <a
                 href="https://github.com/Paceeba-Rick"
                 target="_blank"
@@ -126,7 +126,7 @@ export default function Portfolio() {
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="GitHub"
               >
-                <Github size={24} />
+                <Github size={20} sm:size={24} className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a
                 href="https://www.tiktok.com/@_ceeba"
@@ -136,7 +136,7 @@ export default function Portfolio() {
                 aria-label="TikTok"
               >
                 <svg
-                  className="w-6 h-6"
+                  className="w-5 h-5 sm:w-6 sm:h-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -148,7 +148,7 @@ export default function Portfolio() {
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Email"
               >
-                <Mail size={24} />
+                <Mail size={20} className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
             </div>
           </div>
@@ -186,16 +186,15 @@ export default function Portfolio() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-card/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="animate-fadeInUp">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                About Me
-              </span>
-            </h2>
+      <section id="about" className="py-16 sm:py-20 bg-card/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              About Me
+            </span>
+          </h2>
 
-            <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               <div className="animate-stagger-1 group p-8 rounded-xl border border-border hover:border-primary/50 bg-background hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer hover:scale-105">
                 <TrendingUp className="text-primary mb-4 group-hover:scale-110 transition-transform" size={32} />
                 <h3 className="text-xl font-bold mb-2">Full Stack Development</h3>
@@ -256,16 +255,15 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="animate-fadeInUp">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Featured Projects
-              </span>
-            </h2>
+      <section id="projects" className="py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Featured Projects
+            </span>
+          </h2>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {[
                 {
                   title: 'Lens J-Pixels',
@@ -304,16 +302,15 @@ export default function Portfolio() {
       </section>
 
       {/* Certificates Section */}
-      <section id="certificates" className="py-20 bg-card/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="animate-fadeInUp">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Certifications & Achievements
-              </span>
-            </h2>
+      <section id="certificates" className="py-16 sm:py-20 bg-card/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Certifications & Achievements
+            </span>
+          </h2>
 
-            <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {[
                 {
                   title: 'Introduction to Software Engineering',
@@ -346,16 +343,16 @@ export default function Portfolio() {
       </section>
 
       {/* Leadership & Speaking Section */}
-      <section id="leadership" className="py-20 bg-card/30">
-        <div className="max-w-7xl mx-auto px-6">
+      <section id="leadership" className="py-16 sm:py-20 bg-card/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="animate-fadeInUp">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Leadership & Community Impact
               </span>
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
               <div className="space-y-6">
                 <div>
                   <h3 className="text-2xl font-bold mb-3">Leadership Development Training</h3>
@@ -410,16 +407,15 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="animate-fadeInUp">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Let&apos;s Connect
-              </span>
-            </h2>
+      <section id="contact" className="py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Get In Touch
+            </span>
+          </h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 mb-12">
               <ContactCard
                 icon={<Github size={40} />}
                 title="GitHub"
@@ -508,10 +504,10 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-12 bg-card/30">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-muted-foreground mb-4">© 2025 Paceeba Yakubu. All rights reserved.</p>
-          <div className="flex justify-center gap-6">
+      <footer className="border-t border-border py-8 sm:py-12 bg-card/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+          <p className="text-sm sm:text-base text-muted-foreground mb-6">© 2025 Paceeba Yakubu. All rights reserved.</p>
+          <div className="flex justify-center gap-4 sm:gap-6 flex-wrap">
             <a
               href="https://github.com/Paceeba-Rick"
               target="_blank"
