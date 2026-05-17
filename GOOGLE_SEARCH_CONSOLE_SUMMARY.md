@@ -88,7 +88,7 @@ Your portfolio has been professionally optimized for Google Search Console with 
 
 ### Live Sitemap
 ```
-URL: https://paceeba-portfolio.vercel.app/sitemap.xml
+URL: https://ceebas.space/sitemap.xml
 Format: W3C Standard XML Sitemap 0.9
 Size: 6 URLs
 Update Frequency: Dynamic (on deployment)
@@ -103,7 +103,7 @@ Status: ✅ Ready to submit
 1. Go to: https://search.google.com/search-console
 2. Click **"+ Create property"**
 3. Select **"Domain"**
-4. Enter: `paceeba-portfolio.vercel.app`
+4. Enter: `ceebas.space`
 5. Choose verification method (see guide)
 6. Complete verification
 
@@ -119,11 +119,11 @@ Status: ✅ Ready to submit
 
 ### STEP 3: Request Initial Indexing ⏰ DO THIS THIRD
 1. Use **"URL inspection"** tool
-2. Enter: `https://paceeba-portfolio.vercel.app`
+2. Enter: `https://ceebas.space`
 3. Click **"Request indexing"**
 4. Repeat for:
-   - `https://paceeba-portfolio.vercel.app/#projects`
-   - `https://paceeba-portfolio.vercel.app/#contact`
+   - `https://ceebas.space/#projects`
+   - `https://ceebas.space/#contact`
 
 **Estimated Time**: 10 minutes
 
@@ -287,7 +287,7 @@ GSC → Coverage, Performance, Core Web Vitals
 
 ### Site Information
 ```
-Domain: paceeba-portfolio.vercel.app
+Domain: ceebas.space
 Protocol: HTTPS (Secure)
 Type: Single-page portfolio
 CMS: Next.js 16
@@ -301,13 +301,13 @@ Allow: All content accessible
 Block: API routes, JSON files
 Crawl Delay: 0 for Googlebot, 1 for Bingbot
 Sitemap: /sitemap.xml
-Host: paceeba-portfolio.vercel.app
+Host: ceebas.space
 ```
 
 ### Indexing Settings
 ```
 Robots Meta: index, follow
-Canonical: https://paceeba-portfolio.vercel.app
+Canonical: https://ceebas.space
 Language: English
 Region: Global (no geotargeting)
 Mobile: Fully responsive
@@ -352,9 +352,9 @@ Analytics: https://analytics.google.com (optional)
 
 ### Status Check URLs
 ```
-Sitemap: https://paceeba-portfolio.vercel.app/sitemap.xml
-Robots: https://paceeba-portfolio.vercel.app/robots.txt
-Site: https://paceeba-portfolio.vercel.app
+Sitemap: https://ceebas.space/sitemap.xml
+Robots: https://ceebas.space/robots.txt
+Site: https://ceebas.space
 ```
 
 ---

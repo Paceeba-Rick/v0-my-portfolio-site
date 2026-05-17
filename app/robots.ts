@@ -32,7 +32,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: '/',
       },
     ],
-    sitemap: 'https://paceeba-portfolio.vercel.app/sitemap.xml',
-    host: 'https://paceeba-portfolio.vercel.app',
+    sitemap: 'https://ceebas.space/sitemap.xml',
+    host: 'https://ceebas.space',
   };
 }

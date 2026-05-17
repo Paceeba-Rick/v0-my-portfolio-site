@@ -9,7 +9,7 @@ This guide covers all Google Search Console optimizations implemented for maximu
 
 ### Current Setup
 - **Location**: `/sitemap.xml` (auto-generated)
-- **Submission**: https://paceeba-portfolio.vercel.app/sitemap.xml
+- **Submission**: https://ceebas.space/sitemap.xml
 - **Update Frequency**: Dynamic (regenerates on each build)
 - **Items**: 6 main sections (Home, About, Projects, Certificates, Leadership, Contact)
 
@@ -65,7 +65,7 @@ robots.txt
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Paceeba Yakubu",
-  "url": "https://paceeba-portfolio.vercel.app",
+  "url": "https://ceebas.space",
   "jobTitle": "Full Stack Developer",
   "affiliation": "University of Ghana",
   "sameAs": [
@@ -103,7 +103,7 @@ robots.txt
 - **og:title**: Paceeba Yakubu | Full Stack Developer
 - **og:description**: Full Stack Developer crafting beautiful, performant web and mobile experiences
 - **og:image**: [high-quality profile image]
-- **og:url**: https://paceeba-portfolio.vercel.app
+- **og:url**: https://ceebas.space
 
 #### Twitter Card
 - **Card Type**: summary_large_image
@@ -130,7 +130,7 @@ robots.txt
 
 ## 6. CANONICAL URL
 
-**Configured as**: `https://paceeba-portfolio.vercel.app`
+**Configured as**: `https://ceebas.space`
 
 This prevents duplicate content issues across variations.
 
@@ -142,9 +142,9 @@ This prevents duplicate content issues across variations.
 1. ✅ Submit sitemap via GSC dashboard
 2. ✅ Request indexing for homepage
 3. Submit via URL inspection tool:
-   - https://paceeba-portfolio.vercel.app
-   - https://paceeba-portfolio.vercel.app/#projects
-   - https://paceeba-portfolio.vercel.app/#contact
+   - https://ceebas.space
+   - https://ceebas.space/#projects
+   - https://ceebas.space/#contact
 
 ### Verification Methods (Choose One)
 - [ ] Domain property verification (recommended)
@@ -154,7 +154,7 @@ This prevents duplicate content issues across variations.
 
 ### Setup Steps
 1. Go to: https://search.google.com/search-console
-2. Add Property → "paceeba-portfolio.vercel.app"
+2. Add Property → "ceebas.space"
 3. Verify ownership (recommended: DNS verification for vercel.app)
 4. Submit sitemap
 5. Request indexing
@@ -227,7 +227,7 @@ This prevents duplicate content issues across variations.
 ## 11. ADVANCED SEO SETTINGS
 
 ### Preferred Domain
-Set in GSC: https://paceeba-portfolio.vercel.app (with trailing slash for homepage)
+Set in GSC: https://ceebas.space (with trailing slash for homepage)
 
 ### Crawl Rate
 - Google: Unrestricted (0 crawl-delay)
@@ -287,18 +287,18 @@ Google may create a knowledge panel automatically if:
 
 ### Primary URLs to Monitor
 ```
-https://paceeba-portfolio.vercel.app                    (Homepage)
-https://paceeba-portfolio.vercel.app/#about             (About section)
-https://paceeba-portfolio.vercel.app/#projects          (Projects)
-https://paceeba-portfolio.vercel.app/#certificates      (Certificates)
-https://paceeba-portfolio.vercel.app/#leadership        (Leadership)
-https://paceeba-portfolio.vercel.app/#contact           (Contact)
+https://ceebas.space                    (Homepage)
+https://ceebas.space/#about             (About section)
+https://ceebas.space/#projects          (Projects)
+https://ceebas.space/#certificates      (Certificates)
+https://ceebas.space/#leadership        (Leadership)
+https://ceebas.space/#contact           (Contact)
 ```
 
 ### Sitemap & Robots URLs
 ```
-https://paceeba-portfolio.vercel.app/sitemap.xml        (Sitemap)
-https://paceeba-portfolio.vercel.app/robots.txt         (Robots)
+https://ceebas.space/sitemap.xml        (Sitemap)
+https://ceebas.space/robots.txt         (Robots)
 ```
 
 ---

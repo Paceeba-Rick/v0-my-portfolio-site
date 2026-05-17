@@ -20,7 +20,7 @@ All technical SEO requirements have been implemented. Follow this guide to regis
 **Benefits**: Covers all subdomains and protocols (http/https)
 
 1. In Search Console, select "Domain"
-2. Enter: `paceeba-portfolio.vercel.app`
+2. Enter: `ceebas.space`
 3. Click "Continue"
 4. Choose verification method:
 
@@ -49,7 +49,7 @@ All technical SEO requirements have been implemented. Follow this guide to regis
 ### Option B: URL Prefix Property
 **If domain is at Vercel:**
 1. Select "URL prefix"
-2. Enter: `https://paceeba-portfolio.vercel.app`
+2. Enter: `https://ceebas.space`
 3. Click "Continue"
 4. Follow verification steps above
 
@@ -73,12 +73,12 @@ Once verified:
 ### Initial Crawl Request:
 
 1. Click **"URL inspection"** (top of GSC)
-2. Enter: `https://paceeba-portfolio.vercel.app`
+2. Enter: `https://ceebas.space`
 3. Click **"Test live URL"**
 4. If crawl succeeds, click **"Request indexing"**
 5. Repeat for key pages:
-   - `https://paceeba-portfolio.vercel.app/#projects`
-   - `https://paceeba-portfolio.vercel.app/#contact`
+   - `https://ceebas.space/#projects`
+   - `https://ceebas.space/#contact`
 
 ---
 
@@ -122,7 +122,7 @@ Once verified:
 
 ### Preferred Domain
 1. Go to **"Settings"** → **"Crawlers"**
-2. Set preferred domain: `paceeba-portfolio.vercel.app`
+2. Set preferred domain: `ceebas.space`
 3. Set protocol: `https`
 
 ### Crawl Budget Settings
@@ -153,7 +153,7 @@ Once verified:
 | Twitter Cards | ✅ Active | `app/layout.tsx` |
 | Mobile Optimization | ✅ Active | Full page |
 | Core Web Vitals | ✅ Optimized | Performance tracking |
-| Canonical URL | ✅ Set | `https://paceeba-portfolio.vercel.app` |
+| Canonical URL | ✅ Set | `https://ceebas.space` |
 
 ---
 
@@ -267,12 +267,12 @@ Verify: Shows "Allow: /"
 
 ### Live Sitemap URL
 ```
-https://paceeba-portfolio.vercel.app/sitemap.xml
+https://ceebas.space/sitemap.xml
 ```
 
 ### Sitemap Contents
 ```
-1. Homepage (https://paceeba-portfolio.vercel.app)
+1. Homepage (https://ceebas.space)
 2. About Section (#about)
 3. Projects Section (#projects)
 4. Certificates Section (#certificates)
@@ -285,7 +285,7 @@ https://paceeba-portfolio.vercel.app/sitemap.xml
 ## QUICK REFERENCE
 
 ### Site Info
-- **Domain**: paceeba-portfolio.vercel.app
+- **Domain**: ceebas.space
 - **Protocol**: HTTPS (secure)
 - **Sitemap**: /sitemap.xml
 - **Robots**: /robots.txt

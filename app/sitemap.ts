@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://paceeba-portfolio.vercel.app';
+  const baseUrl = 'https://ceebas.space';
   const lastModified = new Date('2026-05-17');
 
   return [

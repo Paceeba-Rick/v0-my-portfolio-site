@@ -27,7 +27,7 @@ User-agent: SemrushBot
 Disallow: /
 
 # Sitemap location for search engines
-Sitemap: https://paceeba-portfolio.vercel.app/sitemap.xml
+Sitemap: https://ceebas.space/sitemap.xml
 
 # Host specification (helps Google understand canonical domain)
-Host: https://paceeba-portfolio.vercel.app
+Host: https://ceebas.space

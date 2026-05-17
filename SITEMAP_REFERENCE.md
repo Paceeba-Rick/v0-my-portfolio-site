@@ -1,7 +1,7 @@
 # Sitemap Reference & Structure
 
 ## Live Sitemap XML
-**URL**: `https://paceeba-portfolio.vercel.app/sitemap.xml`
+**URL**: `https://ceebas.space/sitemap.xml`
 
 ---
 
@@ -9,7 +9,7 @@
 
 ### 1. HOMEPAGE
 ```
-URL: https://paceeba-portfolio.vercel.app/
+URL: https://ceebas.space/
 Priority: 1.0 (HIGHEST)
 Change Frequency: Weekly
 Last Modified: 2026-05-17
@@ -19,7 +19,7 @@ SEO Value: Highest - establishes domain authority
 
 ### 2. ABOUT SECTION
 ```
-URL: https://paceeba-portfolio.vercel.app/#about
+URL: https://ceebas.space/#about
 Priority: 0.9 (HIGH)
 Change Frequency: Monthly
 Last Modified: 2026-05-17
@@ -30,7 +30,7 @@ Keywords: Full Stack Developer, experience, skills
 
 ### 3. PROJECTS SECTION
 ```
-URL: https://paceeba-portfolio.vercel.app/#projects
+URL: https://ceebas.space/#projects
 Priority: 0.95 (HIGHEST - SECONDARY)
 Change Frequency: Weekly
 Last Modified: 2026-05-17
@@ -46,7 +46,7 @@ Featured Projects:
 
 ### 4. CERTIFICATES SECTION
 ```
-URL: https://paceeba-portfolio.vercel.app/#certificates
+URL: https://ceebas.space/#certificates
 Priority: 0.8 (MEDIUM-HIGH)
 Change Frequency: Monthly
 Last Modified: 2026-05-17
@@ -60,7 +60,7 @@ Featured Certifications:
 
 ### 5. LEADERSHIP SECTION
 ```
-URL: https://paceeba-portfolio.vercel.app/#leadership
+URL: https://ceebas.space/#leadership
 Priority: 0.75 (MEDIUM)
 Change Frequency: Monthly
 Last Modified: 2026-05-17
@@ -71,7 +71,7 @@ Keywords: Leadership, African Innovators, experience
 
 ### 6. CONTACT SECTION
 ```
-URL: https://paceeba-portfolio.vercel.app/#contact
+URL: https://ceebas.space/#contact
 Priority: 0.9 (HIGH)
 Change Frequency: Monthly
 Last Modified: 2026-05-17
@@ -256,7 +256,7 @@ Your sitemap follows W3C standards:
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://paceeba-portfolio.vercel.app</loc>
+    <loc>https://ceebas.space</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -329,9 +329,9 @@ After submitting to GSC, verify:
 
 ### Your Site URLs
 ```
-Live Site: https://paceeba-portfolio.vercel.app
-Sitemap: https://paceeba-portfolio.vercel.app/sitemap.xml
-Robots: https://paceeba-portfolio.vercel.app/robots.txt
+Live Site: https://ceebas.space
+Sitemap: https://ceebas.space/sitemap.xml
+Robots: https://ceebas.space/robots.txt
 ```
 
 ### Official Resources
