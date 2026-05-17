@@ -15,7 +15,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'Paceeba Yakubu | Full Stack Developer - Portfolio',
   description: 'Professional portfolio of Paceeba Yakubu - Full Stack Developer specializing in web and mobile applications. University of Ghana student with IBM & Coursera certifications.',
-  keywords: ['Full Stack Developer', 'Web Development', 'Mobile Apps', 'React', 'Next.js', 'Portfolio'],
+  keywords: ['Paceeba','Full Stack Developer', 'Web Development', 'Mobile Apps', 'React', 'Next.js', 'Portfolio'],
   generator: 'v0.app',
   authors: [{ name: 'Paceeba Yakubu', url: 'https://github.com/Paceeba-Rick' }],
   creator: 'Paceeba Yakubu',
