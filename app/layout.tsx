@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   generator: 'v0.app',
   authors: [{ name: 'Paceeba Yakubu', url: 'https://github.com/Paceeba-Rick' }],
   creator: 'Paceeba Yakubu',
-  metadataBase: new URL('https://paceeba-portfolio.vercel.app'),
+  metadataBase: new URL('https://ceebas.space'),
   alternates: {
-    canonical: 'https://paceeba-portfolio.vercel.app',
+    canonical: 'https://ceebas.space',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://paceeba-portfolio.vercel.app',
+    url: 'https://ceebas.space',
     siteName: 'Paceeba Yakubu Portfolio',
     title: 'Paceeba Yakubu | Full Stack Developer',
     description: 'Full Stack Developer crafting beautiful, performant web and mobile experiences. University of Ghana student with IBM & Coursera certifications.',
@@ -90,7 +90,7 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Paceeba Yakubu',
-    url: 'https://paceeba-portfolio.vercel.app',
+    url: 'https://ceebas.space',
     jobTitle: 'Full Stack Developer',
     affiliation: 'University of Ghana',
     sameAs: [
