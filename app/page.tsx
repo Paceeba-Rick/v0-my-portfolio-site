@@ -274,7 +274,7 @@ export default function Portfolio() {
                 {
                   title: 'Ekduol LTD',
                   description: 'A palm products production company website',
-                  url: 'https://ekduolimited.vercel.app/',
+                  url: 'https://ekduoltd.vercel.app',
                   tech: ['React', 'Node.js', 'MongoDB'],
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ekduo-OEvnTOjl2m0sQOw7XxV9uTaq7TgJMH.jpeg',
                 },
