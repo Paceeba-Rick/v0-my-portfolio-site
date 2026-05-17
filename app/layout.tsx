@@ -15,18 +15,18 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'Paceeba Yakubu | Full Stack Developer - Portfolio',
   description: 'Professional portfolio of Paceeba Yakubu - Full Stack Developer specializing in web and mobile applications. University of Ghana student with IBM & Coursera certifications.',
-  keywords: ['Full Stack Developer', 'Web Development', 'Mobile Apps', 'React', 'Next.js', 'Portfolio'],
+  keywords: ['Paceeba', 'Full Stack Developer', 'Web Development', 'Mobile Apps', 'React', 'Next.js', 'Portfolio'],
   generator: 'v0.app',
   authors: [{ name: 'Paceeba Yakubu', url: 'https://github.com/Paceeba-Rick' }],
   creator: 'Paceeba Yakubu',
-  metadataBase: new URL('https://paceeba-portfolio.vercel.app'),
+  metadataBase: new URL('https://ceebas.space'),
   alternates: {
-    canonical: 'https://paceeba-portfolio.vercel.app',
+    canonical: 'https://ceebas.space',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://paceeba-portfolio.vercel.app',
+    url: 'https://ceebas.space',
     siteName: 'Paceeba Yakubu Portfolio',
     title: 'Paceeba Yakubu | Full Stack Developer',
     description: 'Full Stack Developer crafting beautiful, performant web and mobile experiences. University of Ghana student with IBM & Coursera certifications.',
@@ -50,30 +50,34 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
   },
+  verification: {
+    google: 'HK3R0MxX5YHdBT45i_YpxDxvU80Q5GB92-claiu6v2sns ', // Add after GSC verification
+  },
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
+        url: '/icon-circular.png',
+        sizes: '32x32',
+        type: 'image/png',
       },
       {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/icon-circular.png',
+        sizes: '192x192',
+        type: 'image/png',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/icon-circular.png',
+    shortcut: '/icon-circular.png',
   },
 }
 

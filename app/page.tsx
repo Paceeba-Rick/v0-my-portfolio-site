@@ -262,7 +262,7 @@ export default function Portfolio() {
             </span>
           </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8" id="projects-grid">
               {[
                 {
                   title: 'Lens J-Pixels',
@@ -274,7 +274,7 @@ export default function Portfolio() {
                 {
                   title: 'Ekduol LTD',
                   description: 'A palm products production company website',
-                  url: 'https://ekduolimited.vercel.app/',
+                  url: 'https://ekduoltd.vercel.app',
                   tech: ['React', 'Node.js', 'MongoDB'],
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ekduo-OEvnTOjl2m0sQOw7XxV9uTaq7TgJMH.jpeg',
                 },
@@ -342,12 +342,11 @@ export default function Portfolio() {
       {/* Leadership & Speaking Section */}
       <section id="leadership" className="py-16 sm:py-20 bg-card/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="animate-fadeInUp">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Leadership & Community Impact
-              </span>
-            </h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Leadership & Community Impact
+            </span>
+          </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
               <div className="space-y-6">
@@ -399,7 +398,6 @@ export default function Portfolio() {
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </section>
 

@@ -1,5 +1,33 @@
+# Portfolio SEO Robots Configuration
 User-agent: *
 Allow: /
+Allow: /public/
 Disallow: /api
+Disallow: /*.json$
+Disallow: /*?*sort=
+Disallow: /*?*filter=
 
-Sitemap: https://paceeba-portfolio.vercel.app/sitemap.xml
+# Specific crawling instructions for search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Sitemap location for search engines
+Sitemap: https://ceebas.space/sitemap.xml
+
+# Host specification (helps Google understand canonical domain)
+Host: https://ceebas.space

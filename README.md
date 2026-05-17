@@ -119,7 +119,7 @@ Create a `.env.local` file:
 NEXT_PUBLIC_VERCEL_ANALYTICS_ID=your_id_here
 
 # Site URL
-NEXT_PUBLIC_SITE_URL=https://paceeba-portfolio.vercel.app
+NEXT_PUBLIC_SITE_URL=https://ceebas.space
 ```
 
 ## 🎨 Customization
