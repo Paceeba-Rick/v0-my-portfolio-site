@@ -7,27 +7,6 @@ import { Github, TrendingUp, Mail, MessageCircle, ChevronDown } from 'lucide-rea
 import { ProjectCard } from '@/components/ProjectCard';
 import { CertificateCard } from '@/components/CertificateCard';
 import { ContactCard } from '@/components/ContactCard';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-
-// Helper component for animated headings
-function ScrollAnimatedH2({ children, className = '' }: { children: React.ReactNode; className?: string }) {
-  const { ref, isVisible } = useScrollAnimation();
-  return (
-    <h2 ref={ref} className={`${className} ${isVisible ? 'scroll-animate' : ''}`}>
-      {children}
-    </h2>
-  );
-}
-
-// Helper component for animated content
-function ScrollAnimatedContent({ children, className = '' }: { children: React.ReactNode; className?: string }) {
-  const { ref, isVisible } = useScrollAnimation();
-  return (
-    <div ref={ref} className={`${className} ${isVisible ? 'scroll-animate' : ''}`}>
-      {children}
-    </div>
-  );
-}
 
 export default function Portfolio() {
   const [scrollY, setScrollY] = useState(0);
@@ -209,11 +188,11 @@ export default function Portfolio() {
       {/* About Section */}
       <section id="about" className="py-16 sm:py-20 bg-card/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <ScrollAnimatedH2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               About Me
             </span>
-          </ScrollAnimatedH2>
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               <div className="animate-stagger-1 group p-8 rounded-xl border border-border hover:border-primary/50 bg-background hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer hover:scale-105">
@@ -277,11 +256,11 @@ export default function Portfolio() {
       {/* Projects Section */}
       <section id="projects" className="py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <ScrollAnimatedH2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Featured Projects
             </span>
-          </ScrollAnimatedH2>
+          </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8" id="projects-grid">
               {[
@@ -323,11 +302,11 @@ export default function Portfolio() {
       {/* Certificates Section */}
       <section id="certificates" className="py-16 sm:py-20 bg-card/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <ScrollAnimatedH2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Certifications & Achievements
             </span>
-          </ScrollAnimatedH2>
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {[
@@ -363,11 +342,11 @@ export default function Portfolio() {
       {/* Leadership & Speaking Section */}
       <section id="leadership" className="py-16 sm:py-20 bg-card/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <ScrollAnimatedH2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Leadership & Community Impact
             </span>
-          </ScrollAnimatedH2>
+          </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
               <div className="space-y-6">
@@ -425,11 +404,11 @@ export default function Portfolio() {
       {/* Contact Section */}
       <section id="contact" className="py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <ScrollAnimatedH2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Get In Touch
             </span>
-          </ScrollAnimatedH2>
+          </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 mb-12">
             <ContactCard
