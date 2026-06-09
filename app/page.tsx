@@ -18,7 +18,7 @@ export default function Portfolio() {
       setScrollY(window.scrollY);
 
       // Update active section based on scroll
-      const sections = ['home', 'about', 'projects', 'certificates', 'contact'];
+      const sections = ['home', 'about', 'nadir', 'projects', 'certificates', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -51,6 +51,7 @@ export default function Portfolio() {
             {[
               { id: 'home', label: 'Home' },
               { id: 'about', label: 'About' },
+              { id: 'nadir', label: 'Nadir Tech' },
               { id: 'projects', label: 'Projects' },
               { id: 'certificates', label: 'Certificates' },
               { id: 'contact', label: 'Contact' },
@@ -89,7 +90,7 @@ export default function Portfolio() {
           <div className="animate-slideInLeft">
             <div className="animate-pulse-glow mb-4 inline-block">
               <span className="text-xs sm:text-sm font-semibold text-primary px-3 sm:px-4 py-2 rounded-full bg-primary/10 border border-primary/30">
-                ✨ Full Stack Developer
+                ✨ Full Stack Developer & Co-Founder
               </span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
@@ -99,8 +100,7 @@ export default function Portfolio() {
               </span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
-              Full Stack Developer crafting beautiful, performant web and mobile experiences. I specialize in turning
-              complex ideas into elegant solutions.
+              Full Stack Developer and Co-Founder of Nadir Technologies, building innovative software solutions that empower African businesses. I specialize in crafting beautiful, performant web and mobile experiences that turn complex ideas into elegant solutions.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-8">
               <Link
@@ -253,6 +253,101 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Nadir Technologies Section */}
+      <section id="nadir" className="py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Leadership Experience - Co-Founder at Nadir Technologies
+            </span>
+          </h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-12 animate-slideUp">
+            <div className="space-y-6">
+              <div>
+                <p className="text-sm font-semibold text-primary mb-2">About Our Company</p>
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4">Nadir Technologies</h3>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  Co-founding Nadir Technologies represents my commitment to driving digital innovation across Africa. Our mission is to deliver cutting-edge software solutions that empower businesses to thrive in the digital economy.
+                </p>
+                <p className="text-sm text-accent font-semibold mb-6">Tagline: &quot;Find Strength and Rise High&quot;</p>
+              </div>
+
+              <div className="p-6 rounded-lg border border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 space-y-4">
+                <div>
+                  <h4 className="font-semibold text-primary mb-2">Our Mission</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Deliver innovative software solutions and digital transformation services that empower businesses to thrive in the digital economy.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-primary mb-2">Our Vision</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Be the leading software innovation company bridging African businesses and world-class tech solutions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="group relative rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 h-80">
+                <Image
+                  src="/nadir_hero.png"
+                  alt="Nadir Technologies - Hero Section"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="group relative rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 h-64">
+                <Image
+                  src="/nadir_about.png"
+                  alt="Nadir Technologies - Mission & Vision"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div className="animate-stagger-1 p-6 rounded-xl border border-border hover:border-primary/50 bg-background hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center">
+              <div className="text-3xl font-bold text-primary mb-2">💡</div>
+              <h4 className="font-semibold mb-2">Innovation-Driven</h4>
+              <p className="text-xs text-muted-foreground">Pushing boundaries with cutting-edge technology solutions</p>
+            </div>
+
+            <div className="animate-stagger-2 p-6 rounded-xl border border-border hover:border-primary/50 bg-background hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center">
+              <div className="text-3xl font-bold text-primary mb-2">🌍</div>
+              <h4 className="font-semibold mb-2">Local Expertise</h4>
+              <p className="text-xs text-muted-foreground">Deep understanding of African business markets and needs</p>
+            </div>
+
+            <div className="animate-stagger-3 p-6 rounded-xl border border-border hover:border-primary/50 bg-background hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center">
+              <div className="text-3xl font-bold text-primary mb-2">🌟</div>
+              <h4 className="font-semibold mb-2">Global Standards</h4>
+              <p className="text-xs text-muted-foreground">World-class engineering excellence and best practices</p>
+            </div>
+
+            <div className="animate-stagger-4 p-6 rounded-xl border border-border hover:border-primary/50 bg-background hover:bg-card/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 text-center">
+              <div className="text-3xl font-bold text-primary mb-2">✓</div>
+              <h4 className="font-semibold mb-2">Proven Track Record</h4>
+              <p className="text-xs text-muted-foreground">Building successful products trusted by businesses</p>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <a
+              href="https://nadir-technologies.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
+            >
+              Visit Nadir Technologies
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
       <section id="projects" className="py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -264,6 +359,20 @@ export default function Portfolio() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8" id="projects-grid">
               {[
+                {
+                  title: 'Doyin',
+                  description: 'Flagship Campus E-Commerce Marketplace - Nadir Technologies\u0027 flagship product delivering seamless mobile shopping experiences',
+                  url: 'https://doyin.site',
+                  tech: ['FlutterFlow', 'Firebase', 'Node.js'],
+                  image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-15%20at%2012.28.32-i2md440LhXHuAdfKzasAlHoYRc5uq8.jpeg',
+                },
+                {
+                  title: 'Nadir Technologies',
+                  description: 'Co-founded innovative software solutions company empowering African businesses with digital transformation',
+                  url: 'https://nadir-technologies.vercel.app',
+                  tech: ['Next.js', 'React', 'Node.js'],
+                  image: '/nadir_hero.png',
+                },
                 {
                   title: 'Lens J-Pixels',
                   description: 'Professional photography portfolio and service booking platform',
@@ -279,18 +388,18 @@ export default function Portfolio() {
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ekduo-OEvnTOjl2m0sQOw7XxV9uTaq7TgJMH.jpeg',
                 },
                 {
-                  title: 'Doyin',
-                  description: 'A Campus E-Commence Marketplace mobible application',
-                  url: 'https://doyin.site',
-                  tech: ['FlutterFlow', 'Firebase', 'Node.js'],
-                  image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-15%20at%2012.28.32-i2md440LhXHuAdfKzasAlHoYRc5uq8.jpeg',
-                },
-                {
                   title: 'MZ Deer Farms',
                   description: 'A Fresh Whole checken and poultry business',
                   url: 'https://mzdeerfarms.com',
                   tech: ['Next.js', 'PostgreSQL', 'Tailwind CSS'],
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mzdeerfarms-h3foyyHniyKZzavznhTt7Un7u46oIF.jpeg',
+                },
+                {
+                  title: 'EasySign',
+                  description: 'Secure document signing platform for collecting signatures digitally',
+                  url: 'https://my-easysign.base44.app/',
+                  tech: ['Base44', 'React', 'Node.js'],
+                  image: '/easysign_hero.png',
                 },
               ].map((project, index) => (
                 <ProjectCard key={index} {...project} index={index} />
@@ -500,7 +609,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="border-t border-border py-8 sm:py-12 bg-card/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-sm sm:text-base text-muted-foreground mb-6">© 2025 Paceeba Yakubu. All rights reserved.</p>
+          <p className="text-sm sm:text-base text-muted-foreground mb-4">© 2025 Paceeba Yakubu. Co-Founder of <a href="https://nadir-technologies.vercel.app" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Nadir Technologies</a>. All rights reserved.</p>
           <div className="flex justify-center gap-4 sm:gap-6 flex-wrap">
             <a
               href="https://github.com/Paceeba-Rick"
