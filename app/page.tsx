@@ -387,6 +387,13 @@ export default function Portfolio() {
                   tech: ['Next.js', 'PostgreSQL', 'Tailwind CSS'],
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mzdeerfarms-h3foyyHniyKZzavznhTt7Un7u46oIF.jpeg',
                 },
+                {
+                  title: 'EasySign',
+                  description: 'Secure document signing platform for collecting signatures digitally',
+                  url: 'https://my-easysign.base44.app/',
+                  tech: ['Base44', 'React', 'Node.js'],
+                  image: '/easysign_hero.png',
+                },
               ].map((project, index) => (
                 <ProjectCard key={index} {...project} index={index} />
               ))}
