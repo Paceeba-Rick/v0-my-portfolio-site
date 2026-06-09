@@ -367,6 +367,13 @@ export default function Portfolio() {
                   image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-15%20at%2012.28.32-i2md440LhXHuAdfKzasAlHoYRc5uq8.jpeg',
                 },
                 {
+                  title: 'Nadir Technologies',
+                  description: 'Co-founded innovative software solutions company empowering African businesses with digital transformation',
+                  url: 'https://nadir-technologies.vercel.app',
+                  tech: ['Next.js', 'React', 'Node.js'],
+                  image: '/nadir_hero.png',
+                },
+                {
                   title: 'Lens J-Pixels',
                   description: 'Professional photography portfolio and service booking platform',
                   url: 'https://lensjpixels.com',
