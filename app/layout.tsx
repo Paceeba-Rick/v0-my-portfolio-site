@@ -32,6 +32,13 @@ export const metadata: Metadata = {
     description: 'Full Stack Developer crafting beautiful, performant web and mobile experiences. University of Ghana student with IBM & Coursera certifications.',
     images: [
       {
+        url: '/paceeba-profile.jpg',
+        width: 1080,
+        height: 1440,
+        alt: 'Paceeba Yakubu - Full Stack Developer & Co-Founder',
+        type: 'image/jpeg',
+      },
+      {
         url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-15%20at%2013.08.36-CXac2xsv4J9MgwBUx8nB87ImCWiHyy.jpeg',
         width: 1200,
         height: 630,
@@ -43,9 +50,9 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     creator: '@_ceeba',
-    title: 'Paceeba Yakubu | Full Stack Developer',
-    description: 'Full Stack Developer crafting beautiful, performant web and mobile experiences',
-    images: ['https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-15%20at%2013.08.36-CXac2xsv4J9MgwBUx8nB87ImCWiHyy.jpeg'],
+    title: 'Paceeba Yakubu | Full Stack Developer & Co-Founder',
+    description: 'Full Stack Developer and Co-Founder crafting beautiful, performant web and mobile experiences',
+    images: ['/paceeba-profile.jpg'],
   },
   robots: {
     index: true,
@@ -66,18 +73,17 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/icon-circular.png',
-        sizes: '32x32',
-        type: 'image/png',
+        url: '/favicon.ico',
+        sizes: 'any',
       },
       {
-        url: '/icon-circular.png',
+        url: '/paceeba-profile.jpg',
         sizes: '192x192',
-        type: 'image/png',
+        type: 'image/jpeg',
       },
     ],
-    apple: '/icon-circular.png',
-    shortcut: '/icon-circular.png',
+    apple: '/paceeba-profile.jpg',
+    shortcut: '/favicon.ico',
   },
 }
 
