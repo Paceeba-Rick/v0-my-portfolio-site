@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'HK3R0MxX5YHdBT45i_YpxDxvU80Q5GB92-claiu6v2sns ', // Add after GSC verification
+    google: 'HK3R0MxX5YHdBT45i_YpxDxvU80Q5GB92-claiu6v2sns',
   },
   icons: {
     icon: [
