@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Production deployment configuration
   // Enable compression
   compress: true,
 
